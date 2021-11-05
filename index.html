@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tercer Amigo</title>
+    <!-- <link rel="stylesheet" href="/styles/normalize.css"> -->
+    <link rel="stylesheet" href="/styles/loginStyles.css">
+</head>
+<body>
+    
+<section class="active">
+    <div class="container">
+        <div class="user signinBx">
+            <div class="imgBx"><img src="img/oldpeople1.jpg" alt="old-people"></div> 
+            <div class="formBx">
+                <form>
+                    <!-- <div class="imgLogo"><img src="https://i.imgur.com/6zzIIdl.png" alt="logo"></div>  -->
+                    <h2>Tercer Amigo</h2>
+                    <input type="text" placeholder="Usuario">
+                    <input type="password" placeholder="Contraseña">
+                    <input type="submit" value="Iniciar Sesion">
+                    <p class="signup">¿No tienes una cuenta? <a href="#" onclick="toggleForm();">Registrarse</a></p>
+                </form>
+            </div>
+        </div>
+
+        <div class="user signupBx">
+            <div class="formBx">
+                <form>
+                    <h2>Crear una cuenta</h2>
+                    <input type="text" placeholder="Usuario">
+                    <input type="text" placeholder="Correo Electronico">
+                    <input type="password" placeholder="Contraseña">
+                    <input type="password" placeholder="Confirmar Contraseña">
+                    <select name="select">
+                        <option value="value1" selected disabled>Tipo de usuario</option>
+                        <option value="value2">Voluntario</option>
+                        <option value="value3">Hogar Geriatrico</option>
+                      </select>
+                    <input type="submit" value="Registrar">
+
+                    <p class="signup">¿Ya tienes una cuenta? <a href="#" onclick="toggleForm();">Iniciar Sesión</a></p>
+                </form>
+            </div>
+            <div class="imgBx"><img src="img/oldpeople2.jpg" alt="old-people2"></div> 
+        </div>
+    </div>
+</section>
+
+<script>
+    function toggleForm(){
+        let container = document.querySelector('.container');
+        let section = document.querySelector('section');
+        container.classList.toggle('active');
+        section.classList.toggle('active');
+    }
+</script>
+</body>
+</html>
