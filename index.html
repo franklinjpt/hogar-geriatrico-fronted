@@ -15,31 +15,31 @@
         <div class="user signinBx">
             <div class="imgBx"><img src="img/oldpeople1.jpg" alt="old-people"></div> 
             <div class="formBx">
-                <form>
+                <form id="formularioInicio">
                     <!-- <div class="imgLogo"><img src="https://i.imgur.com/6zzIIdl.png" alt="logo"></div>  -->
                     <h2>Tercer Amigo</h2>
                     <input type="text" placeholder="Usuario">
                     <input type="password" placeholder="Contraseña">
                     <input type="submit" value="Iniciar Sesion">
-                    <p class="signup">¿No tienes una cuenta? <a href="#" onclick="toggleForm();">Registrarse</a></p>
+                    <p class="signup">¿No tienes una cuenta? <a href="/#" onclick="toggleForm();">Registrarse</a></p>
                 </form>
             </div>
         </div>
 
         <div class="user signupBx">
             <div class="formBx">
-                <form>
+                <form id="formularioRegistro">
                     <h2>Crear una cuenta</h2>
-                    <input type="text" placeholder="Usuario">
-                    <input type="text" placeholder="Correo Electronico">
-                    <input type="password" placeholder="Contraseña">
-                    <input type="password" placeholder="Confirmar Contraseña">
-                    <select name="select">
-                        <option value="value1" selected disabled>Tipo de usuario</option>
-                        <option value="value2">Voluntario</option>
-                        <option value="value3">Hogar Geriatrico</option>
+                    <input type="text" name="usuario" placeholder="Usuario">
+                    <input type="text" name="correo" placeholder="Correo Electronico">
+                    <input type="password" name="pass" placeholder="Contraseña">
+                    <input type="password" name="passConfirm" placeholder="Confirmar Contraseña">
+                    <select name="select" id="modelo">
+                        <option selected disabled>Tipo de usuario</option>
+                        <option value="voluntario">Voluntario</option>
+                        <option value="hogar">Hogar Geriatrico</option>
                       </select>
-                    <input type="submit" value="Registrar">
+                    <input type="submit" value="Registrar">                   
 
                     <p class="signup">¿Ya tienes una cuenta? <a href="#" onclick="toggleForm();">Iniciar Sesión</a></p>
                 </form>
@@ -57,5 +57,7 @@
         section.classList.toggle('active');
     }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
